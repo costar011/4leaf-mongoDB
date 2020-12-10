@@ -17,6 +17,8 @@ app.use(express.static(path.join(__dirname, "/assets")));
 
 app.get("/", globalRouter);
 
+app.get("/student", globalRouter);
+
 app.listen(PORT, () => {
   console.log(`✅  ${PORT} Server Start`);
 });
