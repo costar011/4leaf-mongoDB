@@ -1,4 +1,5 @@
 extends ../layouts/main.pug
-
 block content
-    h1 HOME
+    each data in student 
+        h3 학생이름 : #{data.name}
+        hr
