@@ -4,7 +4,6 @@ import path from "path";
 import dotenv from "dotenv";
 dotenv.config();
 import globalRouter from "./router/globalRouter";
-import Student from "../models/Student";
 import mongoose from "mongoose";
 
 const PORT = process.env.PORT;
