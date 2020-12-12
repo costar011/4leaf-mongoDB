@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import globalRouter from "./router/globalRouter";
 import mongoose from "mongoose";
+import Student from "../models/Student";
 
 const PORT = process.env.PORT;
 
@@ -31,6 +32,12 @@ mongoose.connect(
     }
   }
 );
+
+app.get("/student", async (req, res) => {
+  const result = await Student.find({}, {});
+  console.log(result);
+  return res.render("screens/student", { student: result });
+});
 
 app.get("/", globalRouter);
 
