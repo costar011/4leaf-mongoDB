@@ -1,3 +1,5 @@
+import Student from "../../models/Student";
+
 const homeController = (req, res) => {
   res.render("screens/home");
 };
