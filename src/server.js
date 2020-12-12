@@ -33,9 +33,15 @@ mongoose.connect(
   }
 );
 
+app.get("/", async (req, res) => {
+  const result = await Student.find({}, {});
+
+  return res.render("screens/home", { student: result });
+});
+
 app.get("/student", async (req, res) => {
   const result = await Student.find({}, {});
-  console.log(result);
+
   return res.render("screens/student", { student: result });
 });
 
